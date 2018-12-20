@@ -1,4 +1,4 @@
-# iPlix - Netflix like App
+# iPlix - Netflix like app project (Web Mobile Backend Scrape)
 Project for Arkademy Bootcamp Task, create like Netflix App that scrape video from video streaming website
 
 How to install:
