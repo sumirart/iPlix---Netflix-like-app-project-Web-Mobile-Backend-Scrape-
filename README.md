@@ -26,3 +26,8 @@ https://iplix.herokuapp.com/
 3. <a href="https://github.com/ArifSetiyawan"><img src="https://avatars2.githubusercontent.com/u/45303232" title="ArifSetiyawan" width="50" height="50"></a> Arif (Mobile, React Native)
 4. <a href="https://github.com/Rifqi3004"><img src="https://avatars3.githubusercontent.com/u/23551497" title="Rifqi3004" width="50" height="50"></a> Rifqi (Backend, AdonisJS)
 5. <a href="https://github.com/j-blank"><img src="https://avatars0.githubusercontent.com/u/33077104?s=460&v=4" title="j-blank" width="50" height="50"></a> Dicky (Scrape, Beautiful Soup)
+
+## Thanks to
+- Muhammad Iqbal
+- Isqi Ariza
+- Ega Wachid Radiegtya
