@@ -12,20 +12,42 @@ This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
 8. Migrations and seeds
 
 ## Setup
+install package nodejs,npm,mysqlserver and other package server
 
-Use the adonis command to install the blueprint
+``sql
+import movie.sql to your database
+``
 
-```bash
-adonis new yardstick
-```
+open conosle and run
 
-or manually clone the repo and then run `npm install`.
+``npm install``
+
+install redis-server for run server redis
+``sudo apt-get install redis-server``
+
+insall adonis cli
+``npm i -g @adonisjs/cli ``
 
 
-### Migrations
+## TESTING
 
-Run the following command to run startup migrations.
+open console run
+``adonis serve --dev``
 
-```js
-adonis migration:run
-```
+open url localhost:3333/movies on browser or postman
+
+## Endpoint
+/movies   ``for gett all movies data``
+/movies/popular   ``for get movie popular``
+/movies/trending  ``for get movies trending``
+/movies/cached    ``for cached get movies``
+/movies/:param  ``this enpoint for search, pagination, and get categories, show with id
+          /movies/categories_movie  ==> have 3 categories it is box-office,tv-series,animes (string)
+          /movies/id ==> this id for shwo movie where param id (integer)
+          /movie?search=STRING ===> query search
+          /movie?page=INT   ===> show page pagination
+          /movie?limit=INT  ==> for limit pagination
+          /movie?search=STRING&limit=INT&page=INT   => this for combine query search,page and limit
+          ``
+/movies/:id/related ``==> for show related movie from categories id movie``
+
