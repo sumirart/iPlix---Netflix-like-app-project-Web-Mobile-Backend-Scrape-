@@ -25,7 +25,7 @@ export default class Film extends Component {
   }
   makeRemoteRequest = () => {
     const { page, limit } = this.state
-    const url = 'http://192.168.0.62:3333/movies?pages=' + this.state.pages + '&limit=' + this.state.limit
+    const url = 'http://iplix.herokuapp.com/movies?pages=' + this.state.pages + '&limit=' + this.state.limit
     this.setState({ loading: true })
     axios.get(url)
       .then(async res => {
@@ -57,31 +57,40 @@ export default class Film extends Component {
 
   renderItem = ({ item, index }) => {
     return (
-      <TouchableOpacity
-        onPress={() =>
-          this.props.navigation.navigate("MovieInfo", {
-            id: item.id,
-            thumbnails: item.thumbnails
-          })
-        }
-      >
-        <ListItem thumbnail>
-          <Left>
+      <ListItem thumbnail>
+        <Left>
+          <TouchableOpacity
+            onPress={() =>
+              this.props.navigation.navigate("MovieInfo", {
+                id: item.id,
+                thumbnails: item.thumbnails
+              })
+            }
+          >
             <Thumbnail square source={{ uri: item.thumbnails }} />
-          </Left>
-          <Body>
-            <Text numberOfLines={1} style={{color:'#fff'}}>{item.title.split(' Sub')[0].replace('Nonton ', '')}</Text>
+          </TouchableOpacity>
+        </Left>
+        <Body>
+          <TouchableOpacity
+            onPress={() =>
+              this.props.navigation.navigate("MovieInfo", {
+                id: item.id,
+                thumbnails: item.thumbnails
+              })
+            }
+          >
+            <Text numberOfLines={1} style={{ color: '#fff' }}>{item.title.split(' Sub')[0].replace('Nonton ', '')}</Text>
             <Text note numberOfLines={1}>{item.description}</Text>
-          </Body>
-        </ListItem>
-      </TouchableOpacity>
+          </TouchableOpacity>
+        </Body>
+      </ListItem>
     )
   }
   render() {
     return (
-      <Container style={{backgroundColor:'#0e0e0e'}}>
+      <Container style={{ backgroundColor: '#0e0e0e' }}>
         <Content>
-        <Text style={{ marginLeft: 15, marginBottom: 8, marginTop: 10, fontSize: 13, color: '#fff' }}>Notifikasi</Text>
+          <Text style={{ marginLeft: 15, marginBottom: 8, marginTop: 10, fontSize: 13, color: '#fff' }}>Notifikasi</Text>
 
           {this.state.data !== null ?
             <FlatList

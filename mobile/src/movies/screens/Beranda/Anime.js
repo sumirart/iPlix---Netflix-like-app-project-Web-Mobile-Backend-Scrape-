@@ -25,7 +25,7 @@ export default class Anime extends Component {
   }
   makeRemoteRequest = () => {
     const { page, limit } = this.state
-    const url = 'http://192.168.0.62:3333/movies?pages=' + this.state.pages + '&limit=' + this.state.limit
+    const url = 'http://iplix.herokuapp.com/movies?pages=' + this.state.pages + '&limit=' + this.state.limit
     this.setState({ loading: true })
     axios.get(url)
       .then(async res => {
@@ -111,7 +111,7 @@ export default class Anime extends Component {
                 keyExtractor={(item, index) => index.toString()}
                 renderItem={this.renderItem}
               /> : <ActivityIndicator size="large" color="#00ff00" />}
-            <Text style={{ marginLeft: 8, marginBottom: 8, marginTop: 10, fontSize: 13, color: '#fff' }}>Film Terpopuler</Text>
+            <Text style={{ marginLeft: 8, marginBottom: 8, marginTop: 10, fontSize: 13, color: '#fff' }}>Anime Terpopuler</Text>
             {this.state.data !== null ?
               <FlatList
                 data={this.state.data.data}
@@ -125,20 +125,7 @@ export default class Anime extends Component {
                 keyExtractor={(item, index) => index.toString()}
                 renderItem={this.renderItem}
               /> : <ActivityIndicator size="large" color="#00ff00" />}
-            <Text style={{ marginLeft: 8, marginBottom: 8, marginTop: 10, fontSize: 13, color: '#fff' }}>Box Office</Text>
-            {this.state.data !== null ?
-              <FlatList
-                data={this.state.data.data}
-                horizontal={true}
-                showsHorizontalScrollIndicator={false}
-                ItemSeparatorComponent={this.renderSepactator}
-                refreshing={this.state.refreshing}
-                onRefresh={this.handleRefreshing}
-                onEndReached={this.handleLoadMore}
-                onEndReachedThreshold={100}
-                keyExtractor={(item, index) => index.toString()}
-                renderItem={this.renderItem}
-              /> : <ActivityIndicator size="large" color="#00ff00" />}
+            
            
           </View>
 

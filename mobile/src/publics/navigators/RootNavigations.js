@@ -20,6 +20,7 @@ import Feed from '../../movies/screens/Feed';
 import Others from '../../movies/screens/Others';
 import Search from '../../movies/screens/Search';
 import MovieInfo from '../../movies/screens/MovieInfo';
+import PlayMovie from '../../movies/screens/PlayMovie';
 import FirstPage from '../../movies/screens/Auth/LoginForm';
 import Register from '../../movies/screens/Auth/Register';
 import Welcome from '../../movies/screens/Welcome'
@@ -28,6 +29,7 @@ const {width:width } = Dimensions.get('window');
 
 const BerandaTop = createMaterialTopTabNavigator({
   Semua: Semua,
+  Anime: Anime,
   BoxOffice: {
     screen : BoxOffice,
     navigationOptions : {
@@ -40,7 +42,6 @@ const BerandaTop = createMaterialTopTabNavigator({
       title : "Tv series"
     }
   },
-  Anime: Anime
 
 },
   {
@@ -69,6 +70,13 @@ const OtherScreens = createStackNavigator({
       header: null
     }
   },
+  PlayMovie: {
+    screen: PlayMovie,
+    navigationOptions: {
+      header: null
+    }
+  },
+  
 })
 const App = createMaterialBottomTabNavigator({
   Beranda: {

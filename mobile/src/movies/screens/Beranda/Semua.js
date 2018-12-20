@@ -25,7 +25,7 @@ export default class Film extends Component {
   }
   makeRemoteRequest = () => {
     const { page, limit } = this.state
-    const url = 'http://192.168.0.62:3333/movies?pages=' + this.state.pages + '&limit=' + this.state.limit
+    const url = 'http://iplix.herokuapp.com/movies?pages=' + this.state.pages + '&limit=' + this.state.limit
     this.setState({ loading: true })
     axios.get(url)
       .then(async res => {

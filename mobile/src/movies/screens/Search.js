@@ -17,7 +17,7 @@ export default class TvSeries extends Component {
   }
 
   makeRemoteRequest = () => {
-    const url = 'http://192.168.0.62:3333/movies?search=' + this.state.searchTmp
+    const url = 'http://iplix.herokuapp.com/movies?search=' + this.state.searchTmp
     this.setState({ loading: true })
     axios.get(url)
       .then(async res => {
@@ -35,24 +35,34 @@ export default class TvSeries extends Component {
 
   renderItem = ({ item, index }) => {
     return (
-      <TouchableOpacity
-        onPress={() =>
-          this.props.navigation.navigate("MovieInfo", {
-            id: item.id,
-            thumbnails: item.thumbnails
-          })
-        }
-      >
-        <ListItem thumbnail>
-          <Left>
+
+      <ListItem thumbnail>
+        <Left>
+          <TouchableOpacity
+            onPress={() =>
+              this.props.navigation.navigate("MovieInfo", {
+                id: item.id,
+                thumbnails: item.thumbnails
+              })
+            }
+          >
             <Thumbnail square source={{ uri: item.thumbnails }} />
-          </Left>
-          <Body>
+          </TouchableOpacity>
+        </Left>
+        <Body>
+          <TouchableOpacity
+            onPress={() =>
+              this.props.navigation.navigate("MovieInfo", {
+                id: item.id,
+                thumbnails: item.thumbnails
+              })
+            }
+          >
             <Text numberOfLines={1} style={{ color: '#fff' }}>{item.title.split(' Sub')[0].replace('Nonton ', '')}</Text>
             <Text note numberOfLines={1}>{item.description}</Text>
-          </Body>
-        </ListItem>
-      </TouchableOpacity>
+          </TouchableOpacity>
+        </Body>
+      </ListItem>
     )
   }
 
@@ -93,8 +103,8 @@ export default class TvSeries extends Component {
                 showsHorizontalScrollIndicator={false}
                 onEndReachedThreshold={100}
                 keyExtractor={(item, index) => index.toString()}
-                renderItem={this.renderItem} /> 
-           : null}
+                renderItem={this.renderItem} />
+            : null}
 
 
         </Content>
