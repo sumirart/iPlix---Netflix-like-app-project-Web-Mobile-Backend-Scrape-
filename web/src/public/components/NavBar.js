@@ -3,9 +3,6 @@ import { withRouter } from 'react-router-dom'
 import { Redirect } from 'react-router';
 import { connect } from 'react-redux';
 
-// import action
-import { logout } from '../../public/redux/actions/auth';
-
 // import Header from './NavBar/Index';
 import Logo from './NavBar/Logo';
 import Navigation from './NavBar/Navigation';
@@ -28,8 +25,6 @@ class NavBar extends Component {
     render() {
         if(this.props.location.pathname === "/login" || this.props.location.pathname === "/register"){
             return null
-        } else if(this.props.auth.user.length === 0){
-        	return <Redirect to="/landing-page" style={{ marginTop: -90}} />
         }
 
         if (this.state.toHome === true) {

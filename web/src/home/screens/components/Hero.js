@@ -1,26 +1,22 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom'
 
-
-class HeroButton extends Component {
-    render(){
-        return(
-            <a href = "/" className = "Button" data-primary={ this.props.primary }> { this.props.text }</a >
-        )
-    }
-}
 
 
 class Hero extends Component {
     render() {
+        const data = this.props.data;
+        // console.log(data);
         return (
-            <div id="hero" className="Hero" style={{ backgroundImage: 'url(https://images.alphacoders.com/633/633643.jpg)' }}>
+            <div id="hero" className="Hero" style={{ backgroundImage: 'url(' + this.props.backgroundImage + ')' }}>
                 <div className="content">
-                    <img className="logo" src="http://www.returndates.com/backgrounds/narcos.logo.png" alt="" />
-                    <h2 style={{ fontSize: 24, fontWeight: 600, lineHeight: 1.4, marginBottom: "1em" }}>Season 2 now available</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque id quam sapiente unde voluptatum alias vero debitis, magnam quis quod.</p>
+                    {/* <img className="logo" src="http://www.returndates.com/backgrounds/narcos.logo.png" alt="" /> */}
+                    <h1 style={{ fontSize: 45, fontWeight: 600, lineHeight: 1.4, marginBottom: 20, paddingTop: 150 }}>{this.props.title}</h1>
+                    <p>{this.props.description}</p>
                     <div className="button-wrapper">
-                        <HeroButton primary={true} text="Watch now" />
-                        {/* <HeroButton primary={false} text="+ My list" /> */}
+                    <Link className = "Button" data-primary={true} to={{ pathname: '/movie/' + data.slug, state: data }} data={data} style={{ color: "white", textDecoration: "none" }}>
+                        Watch Now
+                    </Link>
                     </div>
                 </div>
                 <div className="overlay"></div>

@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@bit/ranm8.netflix-like.ui.item": "^1.0.0",
     "axios": "^0.18.0",
     "bootstrap": "^4.1.3",
     "jquery": "^3.3.1",

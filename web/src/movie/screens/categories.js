@@ -1,9 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import {
-    Container
-} from 'reactstrap';
-// import { Card, CardBody, CardTitle, CardText, CardImg } from 'reactstrap'
 
 class Categories extends Component {
     // constructor(props) {

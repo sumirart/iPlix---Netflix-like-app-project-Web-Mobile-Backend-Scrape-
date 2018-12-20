@@ -15,19 +15,22 @@ class Movie extends Component {
     }
 
     componentDidMount() {
-        this.getMovies(this.props.location.state.id)
+        this.getMoviesRelated(this.props.location.state.id)
     }
     componentDidUpdate(prevProps){
         if(this.props.location.state.id !== prevProps.location.state.id){
-            console.log('props change')
-            this.getMovies(this.props.location.state.id)
+            // console.log('props change')
+            this.getMoviesRelated(this.props.location.state.id)
         }
     }
 
+    // fetchMovie(id){
 
-    getMovies(id) {
+    // }
+
+    getMoviesRelated(id) {
         this.setState({ loading: true });
-        axios.get("http://192.168.0.62:3333/movies/" + id + "/related")
+        axios.get("https://iplix.herokuapp.com/movies/" + id + "/related")
             .then(res => {
                 // console.log(res.data);
                 // this.setState({ lastPage: res.data.lastPage, page: number });
@@ -48,7 +51,7 @@ class Movie extends Component {
 
         // console.log(this.props)
         // console.log(this.props.location.state.id)
-        // console.log(this.props.location.pathname) //"/movie/Nonton-"
+        // console.log(this.props.location.pathname.substr(7,)) //"/movie/Nonton-"
 
         const data = this.props.location.state;
         return (

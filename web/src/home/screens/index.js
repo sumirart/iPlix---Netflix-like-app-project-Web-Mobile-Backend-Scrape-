@@ -25,6 +25,59 @@ class Home extends Component {
     this.fetchPreviousPage = this.fetchPreviousPage.bind(this);
     this.state = {
       // isOpen: false,
+      carousel: [
+        {
+          id: 122,
+          categories_id: 1,
+          title: "Aquaman 2018 CAM",
+          slug: "Aquaman-2018-CAM",
+          thumbnails: "https://bioskopkeren.fun/wp-content/uploads/2018/12/Movie-Aquaman-2018-95x125.jpg",
+          video_url: "",
+          embed_url: "https://nonton.bioskopkeren.pro/redirector.php?id=WGRnZ1R2eHRoNklHUnUya1F6MXE5WWVWOVl3N0lGQmYyalg4UXZUOEpSS25VUENFSUxITzhxOUZhNk9MdE42T3gxRUxTVlBMTG5oY0krMWplemNIckRPRU0vQjVXUlpmWXl5b3NwVDFIMnVsT2VpNUVZQkNyWHNERW1iemVPa1lONDhZd1hmN0pHRmRBMm1EQTV1aXc0QlEwOVZJOVkyQy9qd0dmei9RVGhMbFl1YUFrZlRML0RHRUpjcWhuYTZXY25VZU1HcmFaUE10Y1ZWcFAwN3RrdWh3dU8wdmdXTnFORFBSb3JScm1teTZuZGpnZXJaaVNMNExtVE56Zm11Yg==",
+          rating: "7,9/10",
+          viewer: 0,
+          description: "Aquaman Sejak kecil, Arthur Curry (Jason Momoa) sudah tidak pernah mendapatkan kasih sayang Ibunya. Hanya Tom Curry (Temuera Morrison) yang memberikan petuah-petuah hidup seorang manusia, dan berharap putranya menjadi orang yang berguna di masa depan. Selain mendapatkan petuah dari Tom Curry, Arthur juga mendapatkan wejangan dari Vulko (Willem Dafoe). Orang yang sangat dipercaya ibunya. Kebalikan dari ayah Arthur, Vulko justru mengajarkan hal-hal tentang bertahan hidup. Menyeimbangkan bagaimana Arthur bisa menjadi seorang yang suatu saat nanti akan menghempaskan ombak dari lautan dengan damai. ",
+          director: "James Wan",
+          writers: "David Leslie Johnson-McGoldrick (screenplay by), Will Beall (screenplay by)",
+          genre: "2018,Action,Adventure,Fantasy,Movie",
+          created_at: "2018-12-19 15:52:58",
+          updated_at: "2018-12-19 15:52:58"
+        },
+        {
+          id: 2429,
+          categories_id: 1,
+          title: "Nonton Film Online X-Men Apocalypse Subtitle Indonesia",
+          slug: "Nonton-Film-Online-X-Men-Apocalypse-Subtitle-Indonesia",
+          thumbnails: "https://bioskopkeren.fun/wp-content/uploads/2016/05/xmenapocalypse-102x125.jpg",
+          video_url: "",
+          embed_url: "https://nonton.bioskopkeren.pro/redirector.php?id=WGRnZ1R2eHRoNklHUnUya1F6MXE5WWVWOVl3N0lGQmYyalg4UXZUOEpSSnp6aUQ3cmhuSDVBUFFTcG1RMnBxWVgxOXRyMHJrQ1kyZHVwcjVzaVlPeEtqUFFlemFaVTNnWW9lQTE1RHJoOXVLckZqdzNmVmpQamtkYzRVcXowWDdTZXlOR3M1ODJDU25ZWXVDNzJqUXgzQ01jMEFFWmhNODZ5OFR6ZTlibG83Qnd4SGgyUmlnRWdqNDJrZGk2MUdjUHAyaU1jbUgzR1o0a3N5WHRFei9YRGVIdHpkOE5ObXlaYmNwS2ozOUh4VzBzNzJuVHJKNGZFVGkyNFlvbzJRczR2OFhWQXRaSm9lRUFyRmZYVFlrU1E9PQ==",
+          rating: "7,6/10",
+          viewer: 0,
+          description: "Watch Streaming dan download film movie X-Men: Apocalypse 2016 subtitle bahasa indonesia online gratis di bioskopkeren.fun. Nonton movie Nonton Film Online Bioskop Online Watch Streaming Download Sub Ind",
+          director: "Bryan Singer",
+          writers: "Simon Kinberg (screenplay), Bryan Singer (story)",
+          genre: "2016,Action,Adventure,Fantasy,Movie",
+          created_at: "2018-12-19 16:00:47",
+          updated_at: "2018-12-19 16:00:47"
+        },
+        {
+          id: 4533,
+          categories_id: 1,
+          title: "Nonton The Purge Election Year Subtitle Indonesia",
+          slug: "Nonton-The-Purge-Election-Year-Subtitle-Indonesia",
+          thumbnails: "https://bioskopkeren.fun/wp-content/uploads/2016/07/Movie-The-Purge-Election-Year-2016-102x125.jpg",
+          video_url: "",
+          embed_url: "https://nonton.bioskopkeren.pro/redirector.php?id=WGRnZ1R2eHRoNklHUnUya1F6MXE5WWVWOVl3N0lGQmYyalg4UXZUOEpSSitvQUx5VmoyUDFuaUZHUnFqa2ZsejRJUk9ZdFRZUHByMWVzcExYT0pCTDZCYWNkWklZSW5JWFJMMlIyeGRIV09jeGxwdUloVlVzSGdwK3BKcjBCVTZnNENTOE85VHpuZ3V1WExncmtmZW54ZXVsWlJZT2FJNFZNRE1sYWFKbE9ac3k0amI0MTRxUEhPLzJZbWpwQVhYTE9nUFZOdEh1UGQ0Q2xYeFA1aEl4ZTZScWpaZU0vc29oYlBwRjlURmlVNVc3bStCQXBrTHR1RmdqY1lFdkQ5eWRDYkhFWk5VSFlEcjF3Q1V1RVovSHc9PQ==",
+          rating: "6,3/10",
+          viewer: 0,
+          description: "Watch Streaming dan download film movie The Purge Election Year 2016 subtitle bahasa indonesia online gratis di bioskopkeren.fun. Nonton movie Nonton Film Online Bioskop Online Watch Streaming Download Sub Ind",
+          director: "James DeMonaco",
+          writers: "James DeMonaco",
+          genre: "2016,Action,Horror,Movie,Sci-Fi",
+          created_at: "2018-12-19 16:27:15",
+          updated_at: "2018-12-19 16:27:15"
+        }
+      ],
       movies: [],
       trending: [],
       popular: [],
@@ -40,7 +93,6 @@ class Home extends Component {
     this.getTrending();
     this.getPopular();
   }
-
 
   // fetch next page
   fetchNextPage() {
@@ -65,7 +117,7 @@ class Home extends Component {
   // fetch movies from server
   getMovies(number) {
     this.setState({ loading: true });
-    axios.get("http://192.168.0.62:3333/movies?page=" + number)
+    axios.get("https://iplix.herokuapp.com/movies?page=" + number)
       .then(res => {
         // console.log(res.data.data);
         this.setState({
@@ -85,14 +137,14 @@ class Home extends Component {
   // fetch trending
   getTrending() {
     this.setState({ loadingSection: true });
-    axios.get("http://192.168.0.62:3333/movies/trending")
+    axios.get("https://iplix.herokuapp.com/movies/trending")
       .then(res => {
-        console.log(res.data.data);
+        // console.log(res.data.data);
         this.setState({
           trending: res.data.data,
           loadingSection: false
         });
-        console.log(this.state)
+        // console.log(this.state)
       })
       .catch(err => {
         alert("Connection to server error, please try again!");
@@ -103,14 +155,14 @@ class Home extends Component {
   // fetch popular
   getPopular() {
     this.setState({ loadingSection: true });
-    axios.get("http://192.168.0.62:3333/movies/popular")
+    axios.get("https://iplix.herokuapp.com/movies/popular")
       .then(res => {
-        console.log(res.data.data);
+        // console.log(res.data.data);
         this.setState({
           popular: res.data.data,
           loadingSection: false
         });
-        console.log(this.state)
+        // console.log(this.state)
       })
       .catch(err => {
         alert("Connection to server error, please try again!");
@@ -129,13 +181,30 @@ class Home extends Component {
           </ol>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <Hero />
+              {/* THE PURGE ELECTION */}
+              {/* <Link to={{ pathname: '/movie/' + data.slug, state: data }} data={data} style={{ color: "white", textDecoration: "none" }}> */}
+              <Hero
+                data={this.state.carousel[2]}
+                title="The Purge: Election Year"
+                description="Watch Streaming dan download film movie The Purge Election Year 2016 subtitle bahasa indonesia online gratis di bioskopkeren.fun. Nonton movie Nonton Film Online Bioskop Online Watch Streaming Download Sub Ind."
+                backgroundImage="http://ucsdguardian.org/wp-content/uploads/2016/07/Film_-The-Purge-Election-Year-Image-Courtesy-of-HDQ-Walls.jpg"
+              />
             </div>
             <div className="carousel-item">
-              <Hero />
+              <Hero
+                data={this.state.carousel[0]}
+                title="Aquaman"
+                description="Aquaman Sejak kecil, Arthur Curry (Jason Momoa) sudah tidak pernah mendapatkan kasih sayang Ibunya. Hanya Tom Curry (Temuera Morrison) yang memberikan petuah-petuah hidup seorang manusia, dan berharap putranya menjadi.."
+                backgroundImage="https://am23.akamaized.net/tms/cnt/uploads/2018/08/aquaman-poster-e1537799094924.jpeg"
+              />
             </div>
             <div className="carousel-item">
-              <Hero />
+              <Hero
+                data={this.state.carousel[1]}
+                title="X-Men Apocalypse"
+                description="Watch Streaming dan download film movie X-Men: Apocalypse 2016 subtitle bahasa indonesia online gratis di bioskopkeren.fun. Nonton movie Nonton Film Online Bioskop Online Watch Streaming Download Sub Ind"
+                backgroundImage="https://heroichollywood.com/wp-content/uploads/2016/05/maxresdefault-2.jpg"
+              />
             </div>
           </div>
           <a className="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -163,7 +232,7 @@ class Home extends Component {
                 {
                   this.state.loadingSection === true ? <div className="text-center">Loading...</div> :
 
-                    this.state.trending.slice(0,5).map(data =>
+                    this.state.trending.slice(0, 5).map(data =>
                       <div key={data.id} className="Item" style={{ backgroundImage: 'url(' + data.thumbnails + ')', width: 218 }} >
                         <Link to={{ pathname: '/movie/' + data.slug, state: data }} data={data} style={{ color: "white", textDecoration: "none" }}>
                           <div className="overlay">
@@ -202,7 +271,7 @@ class Home extends Component {
                 {
                   this.state.loadingSection === true ? <div className="text-center">Loading...</div> :
 
-                    this.state.popular.slice(0,5).map(data =>
+                    this.state.popular.slice(0, 5).map(data =>
                       <div key={data.id} className="Item" style={{ backgroundImage: 'url(' + data.thumbnails + ')', width: 218 }} >
                         <Link to={{ pathname: '/movie/' + data.slug, state: data }} data={data} style={{ color: "white", textDecoration: "none" }}>
                           <div className="overlay">
@@ -282,18 +351,18 @@ class Home extends Component {
   }
 }
 
-class Item extends Component {
-  render() {
-    return (
-      <div className="Item" style={{ backgroundImage: 'url(' + this.props.backdrop + ')' }} >
-        <div className="overlay">
-          <div className="title" style={{ lineHeight: 1.2 }}>{this.props.title}</div>
-          <div className="rating">{this.props.score} / 10</div>
-          <div className="plot">{this.props.overview}</div>
-        </div>
-      </div>
-    );
-  }
-}
+// class Item extends Component {
+//   render() {
+//     return (
+//       <div className="Item" style={{ backgroundImage: 'url(' + this.props.backdrop + ')' }} >
+//         <div className="overlay">
+//           <div className="title" style={{ lineHeight: 1.2 }}>{this.props.title}</div>
+//           <div className="rating">{this.props.score} / 10</div>
+//           <div className="plot">{this.props.overview}</div>
+//         </div>
+//       </div>
+//     );
+//   }
+// }
 
 export default Home;

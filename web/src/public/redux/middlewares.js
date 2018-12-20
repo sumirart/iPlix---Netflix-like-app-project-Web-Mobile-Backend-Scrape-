@@ -5,7 +5,7 @@ const middlewares = [];
 
 // middlewares logger
 const logger = createLogger();
-middlewares.push(logger);
+// middlewares.push(logger);
 
 // middleware promise
 middlewares.push(promiseMiddleware());
