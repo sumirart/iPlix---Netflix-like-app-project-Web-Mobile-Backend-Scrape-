@@ -39,7 +39,7 @@ class Register extends Component {
       })
       .catch(err => {
         alert(err.response.data.messages);
-        console.log(err.response);
+        // console.log(err.response);
       });
   }
 

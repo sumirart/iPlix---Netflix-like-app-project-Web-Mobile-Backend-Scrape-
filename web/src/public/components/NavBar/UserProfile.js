@@ -42,7 +42,7 @@ class UserProfile extends Component {
 						<div>
 							<div className="User" onClick={this.toggleShow}>
 								<div className="name">{this.props.auth.user[0].name}</div>
-								<div className="image"><img src="http://lorempixel.com/96/96/" /></div>
+								<div className="image"><img src="http://lorempixel.com/96/96/" alt="custom image" /></div>
 							</div>
 							{
 								this.state.show ?

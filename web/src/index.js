@@ -67,13 +67,3 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister();
-
-{/* <Route component={NavBar} /> */ }
-{/* <Route path='/' component={NavBar}/> */ }
-
-{/* <Route exact path={`/movies`} render={(props) => (
-  <div>
-    <NavBar />
-    <Search {...props} />
-  </div>
-)} /> */}
