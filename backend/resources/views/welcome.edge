@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello Adonis</title>
+  {{ style('style') }}
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+
+async function myFunction() {
+  
+  var datas = []
+  var embed;
+  var detail;  
+  var categories = document.getElementById('category').value
+  var page = parseInt(document.getElementById('page').value)
+  var start = parseInt(document.getElementById('start').value)
+   /* for(start; start <= page; start ++){
+      axios.get('http://68.183.177.9:5000/apiv2/'+categories+'/'+start).then((res) => {
+          const movies = res.data   
+        
+          movies.map(item =>  {      
+              
+                axios.get("http://68.183.177.9:5000/apiv2/info?url="+item.url).then((res3) => {
+                  detail = res3.data
+                }).then(() => {
+                  const data = {
+                    title : item.title,
+                    thumbnails : item.thumbnails,
+                    video_url : detail[0].embed,
+                    genre : detail[0].Genre,
+                    rating : detail[0]['IMDB rating'],
+                    description : detail[0].description,
+                    director : detail[0].Director,
+                    writers : detail[0].Writers,
+                    category_id : 1
+                  }
+                  //console.log(data)
+                  axios.post('/scrap',data).then((respon) => {
+                    //console.log(respon.data)
+                  })
+
+                })
+                
+            })
+            
+        })
+    }
+    */
+
+
+    for(start; start <= page; start ++){
+      axios.get('http://68.183.177.9:5000/api/'+categories+'/'+start).then((res) => {
+          const movies = res.data   
+        
+          movies.map(item =>  {      
+              
+                axios.get("http://68.183.177.9:5000/api/info?url="+item.url).then((res3) => {
+                  detail = res3.data
+                }).then(() => {
+                  const data = {
+                    title : item.title,
+                    thumbnails : item.thumbnails,
+                    video_url : detail[0]['embed'],
+                    genre : detail[0]['Genre:'],
+                    rating : item.rating,
+                    description : detail[0]['Description'],
+                    directors : detail[0]['Directors:'],
+                    country : detail[0]['Countries:'],
+                    actors : detail[0]['Actors:'],
+                    release : detail[0]['Release Date:'],
+                    duration : detail[0]['Duration:'],                    
+                    category_id : 1
+                  }
+                  //console.log(data)
+                  axios.post('/scrap',data).then((respon) => {
+                    //console.log(respon.data)
+                  })
+
+                })
+                
+            })
+            
+        })
+    } 
+
+
+     
+  
+}
+</script>
+</head>
+<body>
+  <section>
+  <div>
+   <label for="page">category</label>
+    <input id="category" />
+  </div>
+  <div>
+    <label for="page">Pages Start</label>
+    <input id="start" />
+  </div>
+  <div>
+    <label for="page">Pages End</label>
+    <input id="page" />
+  </div>
+    <button onclick="myFunction()">Scrap Now</button></div>
+   
+  </section>
+</body>
+</html>

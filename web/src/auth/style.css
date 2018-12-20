@@ -1,0 +1,13 @@
+@media all and (min-width: 480px) {
+    .form {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin: 30px;
+    }
+  }
+
+  .hoverLink:hover {
+    color: red;
+    text-decoration: underline;
+  }
