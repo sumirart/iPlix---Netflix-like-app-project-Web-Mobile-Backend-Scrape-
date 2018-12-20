@@ -14,7 +14,6 @@ Open folder and follow the instruction there in README.md
 
 
 # Demo: 
-Open folder and follow the instruction there in README.md 
 Front end web:
 https://pacific-reef-98235.herokuapp.com/
 
