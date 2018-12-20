@@ -83,7 +83,6 @@ export default class TvSeries extends Component {
 
         </Header>
         <Content>
-          <Text>{this.state.searchTmp}</Text>
           {this.state.loading == true ? <Spinner size="large" color="#00ff00" /> : null}
 
           {this.state.data !== null ?

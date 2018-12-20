@@ -116,7 +116,9 @@ const App = createMaterialBottomTabNavigator({
 
 const RootNavigator = createStackNavigator({
   
- 
+  Welcome: {
+    screen: Welcome,  
+  },
   App: {
     screen: App,
     navigationOptions: {
@@ -173,9 +175,7 @@ const RootNavigator = createStackNavigator({
       header: null
   },
 },
-Welcome: {
-  screen: Welcome,  
-}, 
+ 
 
 });
 export default createAppContainer(RootNavigator);
