@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const IP = "https://iplix.herokuapp.com/user/";
+const IP = process.env.REACT_APP_REST_IP + "/user/";
 
 export const login = (user) => ({
     type : 'LOGIN',

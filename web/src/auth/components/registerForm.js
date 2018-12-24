@@ -2,6 +2,7 @@ import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import { FormControl } from "react-bootstrap";
 import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 // FIELD VALIDATION
 const required = value => value ? undefined : 'Required!';
@@ -64,7 +65,7 @@ const RegisterForm = (props) => {
             <div style={{ marginTop: 10 }}>
                 <Button type="submit" disabled={submitting} color="primary" >Register</Button>
             </div>
-            <p style={{ marginTop: 5, textAlign: "center" }}>Have an account? <a className="hoverLink" href="/login" style={{ fontWeight: "bold" }}>Sign in</a>.</p>
+            <p style={{ marginTop: 5, textAlign: "center" }}>Have an account? <Link className="hoverLink" to="/login" style={{ fontWeight: "bold" }}>Sign in</Link>.</p>
         </form>
     )
 }

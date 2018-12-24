@@ -5,19 +5,16 @@ import { withRouter } from 'react-router-dom'
 
 // import action
 import { logout } from '../../redux/actions/auth';
-// import { logout } from '../../public/redux/actions/auth';
 
 
 class Search extends Component {
 	constructor(props) {
         super(props);
 
-        // this.toggle = this.toggle.bind(this);
         this.state = {
             isOpen: false,
             toHome: false,
             search: '',
-            // toSearch: false,
         };
 	}
 
@@ -49,12 +46,7 @@ class Search extends Component {
 		if (this.state.toHome === true) {
             return <Redirect to="/" />
         }
-        // if (this.state.toSearch === true) {
-        //     // const route = '/movies?search=' + this.state.search;
-        //     return <Redirect to={`/movies?search=` + this.state.search} />
-		// }
 		
-		// console.log(this.props)
         return (
 			<form onSubmit={e => this.handleSubmit(e)} id="search" className="Search">
 				<input type="search" placeholder="Search for a title..." value={this.state.search} onChange={e => this.handleChange(e)} />

@@ -29,6 +29,17 @@
 
   <meta name="description" content="Netflix clone in react.">
 
+  <!-- ONESIGNAL PUSH NOTIFICATION -->
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function () {
+      OneSignal.init({
+        appId: "120ac340-b1fd-4526-9613-73bd5f31b8a8",
+      });
+    });
+  </script>
+
   <meta name="google-site-verification" content="verification_token">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
     crossorigin="anonymous">

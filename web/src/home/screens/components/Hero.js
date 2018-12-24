@@ -13,11 +13,11 @@ class Hero extends Component {
                     {/* <img className="logo" src="http://www.returndates.com/backgrounds/narcos.logo.png" alt="" /> */}
                     <h1 style={{ fontSize: 45, fontWeight: 600, lineHeight: 1.4, marginBottom: 20, paddingTop: 150 }}>{this.props.title}</h1>
                     <p>{this.props.description}</p>
-                    <div className="button-wrapper">
+                    {/* <div className="button-wrapper"> */}
                     <Link className = "Button" data-primary={true} to={{ pathname: '/movie/' + data.slug, state: data }} data={data} style={{ color: "white", textDecoration: "none" }}>
                         Watch Now
                     </Link>
-                    </div>
+                    {/* </div> */}
                 </div>
                 <div className="overlay"></div>
             </div>

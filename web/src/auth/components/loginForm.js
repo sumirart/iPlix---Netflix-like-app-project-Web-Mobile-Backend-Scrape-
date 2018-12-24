@@ -2,6 +2,7 @@ import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import { FormControl } from "react-bootstrap";
 import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const required = value => value ? undefined : 'Required!'
 
@@ -49,7 +50,7 @@ const LoginForm = (props) => {
             <div style={{ marginTop: 10 }}>
                 <Button type="submit" disabled={submitting} color="primary" >Sign In</Button>
             </div>
-            <p style={{ marginTop: 5, textAlign: "center" }}>New to iPlix? <a className="hoverLink" href="/register" style={{ fontWeight: "bold" }}>Sign up now</a>.</p>
+            <p style={{ marginTop: 5, textAlign: "center" }}>New to iPlix? <Link className="hoverLink" to="/register" style={{ fontWeight: "bold" }}>Sign up now</Link>.</p>
         </form>
     )
 }

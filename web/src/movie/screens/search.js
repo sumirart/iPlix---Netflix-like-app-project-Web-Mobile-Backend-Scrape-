@@ -31,7 +31,7 @@ class Search extends Component {
         this.setState({ loading: true });
         const values = queryString.parse(this.props.location.search);
         if (this.state.movies === undefined || this.state.movies.length === 0) {
-            axios.get("https://iplix.herokuapp.com/movies?search=" + values.search + "&page=" + number)
+            axios.get(process.env.REACT_APP_REST_IP + "/movies?search=" + values.search + "&page=" + number)
                 .then(res => {
                     // console.log(res.data);
                     this.setState({ lastPage: res.data.lastPage, page: number });
@@ -42,7 +42,7 @@ class Search extends Component {
                     this.setState({ loading: false })
                 })
         } else {
-            axios.get("https://iplix.herokuapp.com/movies?search=" + values.search + "&page=" + number)
+            axios.get(process.env.REACT_APP_REST_IP + "/movies?search=" + values.search + "&page=" + number)
                 .then(res => {
                     const pushMovie = [...this.state.movies, ...res.data.data];
                     // console.log(pushMovie);
@@ -96,14 +96,14 @@ class Search extends Component {
                                                         <div key={data.id} className="Item" style={{ backgroundImage: 'url(' + data.thumbnails + ')' }} >
                                                             <Link to={{ pathname: '/movie/' + data.slug, state: data }} data={data} style={{ color: "white", textDecoration: "none" }}>
                                                                 <div className="overlay">
-                                                                    <div className="title" style={{ lineHeight: 1.2 }}>{data.title.replace(/(^\Nonton +|\ Subtitle Indonesia+$)/mg, '')}</div>
+                                                                    <div className="title" style={{ lineHeight: 1.2 }}>{data.title}</div>
                                                                     <div className="rating">
                                                                         {data.rating ?
-                                                                            data.rating.substr(0, 3) + ' / 10'
+                                                                            data.rating + ' / 10'
                                                                             : 'no rating'
                                                                         }
                                                                     </div>
-                                                                    <div className="plot">{data.description.substr(0, 100) + '..'}</div>
+                                                                    <div className="plot">{data.description.substr(0, 150) + '..'}</div>
                                                                 </div>
                                                             </Link>
                                                         </div>

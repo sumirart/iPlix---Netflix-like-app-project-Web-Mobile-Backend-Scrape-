@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 
@@ -22,10 +22,9 @@ const Nav = styled.nav`
 const nav = () => {
     return (
       <Nav>
-        <a href={"/"} className="logo">
-            {/* <img src={netflixlogo} alt="Iplix Logo" /> */}
-            <img src='https://fontmeme.com/permalink/181219/d57c3dc63d26ff6f51d5195e3f12a35f.png' alt="Netflix Logo" />
-        </a>
+        <Link to="/" className="logo">
+            {/* <img src='https://fontmeme.com/permalink/181219/d57c3dc63d26ff6f51d5195e3f12a35f.png' alt="Netflix Logo" /> */}
+        </Link>
       </Nav>
     )
 }

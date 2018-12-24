@@ -1,10 +1,10 @@
-import { createLogger } from 'redux-logger';
+// import { createLogger } from 'redux-logger';
 import promiseMiddleware from 'redux-promise-middleware';
 
 const middlewares = [];
 
 // middlewares logger
-const logger = createLogger();
+// const logger = createLogger();
 // middlewares.push(logger);
 
 // middleware promise

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
 
 import { NavLink } from 'reactstrap';
 
@@ -33,16 +34,15 @@ class UserProfile extends Component {
 				{
 					this.props.auth.user.length === 0 ?
 						<div className="User">
-							{/* <NavLink href="/login">Login</NavLink> */}
-							<div className="name btn-SignIn" style={{ padding: 0 }}>
-								<NavLink href="/login">Sign In</NavLink>
+							<div className="name btn-SignIn">
+								<Link to="/login" >Sign In</Link>
 							</div>
 						</div>
 						:
 						<div>
 							<div className="User" onClick={this.toggleShow}>
 								<div className="name">{this.props.auth.user[0].name}</div>
-								<div className="image"><img src="http://lorempixel.com/96/96/" alt="custom image" /></div>
+								<div className="image"><img src="http://lorempixel.com/96/96/" alt="" /></div>
 							</div>
 							{
 								this.state.show ?
