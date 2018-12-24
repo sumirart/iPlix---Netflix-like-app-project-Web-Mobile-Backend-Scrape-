@@ -15,7 +15,7 @@ Open folder and follow the instruction there in README.md
 
 ## Demo: 
 Front end web:
-https://pacific-reef-98235.herokuapp.com/
+http://iplix.web.id/
 
 Backend:
 https://iplix.herokuapp.com/
