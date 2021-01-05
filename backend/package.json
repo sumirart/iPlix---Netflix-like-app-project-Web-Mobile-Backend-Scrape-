@@ -29,7 +29,7 @@
     "@adonisjs/shield": "^1.0.8",
     "@adonisjs/validator": "^5.0.6",
     "async-request": "^1.2.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "axios-jsonp": "^1.0.2",
     "mysql": "^2.16.0",
     "node-redis": "^0.1.7",
